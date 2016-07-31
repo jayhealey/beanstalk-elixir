@@ -1,0 +1,43 @@
+[
+  {
+    "request": {
+      "body": "{\"repository\":{\"type_id\":\"git\",\"name\":\"test-project\",\"title\":\"Test Project\",\"color_label\":\"label-green\"}}",
+      "headers": {
+        "Accept": "application/json",
+        "Content-Type": "application/json"
+      },
+      "method": "post",
+      "options": {
+        "basic_auth": [
+          "fake-username",
+          "fake-password!"
+        ]
+      },
+      "request_body": "",
+      "url": "https://fake-account.beanstalkapp.com/api/repositories.json"
+    },
+    "response": {
+      "body": "{\"repository\":{\"id\":654789,\"account_id\":102030,\"name\":\"test-project\",\"created_at\":\"2016/07/22 22:08:21 +1000\",\"updated_at\":\"2016/07/22 22:08:21 +1000\",\"title\":\"Test Project\",\"color_label\":\"green\",\"storage_used_bytes\":0,\"last_commit_at\":null,\"type\":\"GitRepository\",\"default_branch\":\"master\",\"vcs\":\"git\",\"repository_url\":\"git@fake-account.git.beanstalkapp.com:/fake-account/test-project.git\",\"repository_url_https\":\"https://fake-account.git.beanstalkapp.com/test-project.git\",\"public_key\":\"ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCdqSWYYmOnpdzi2dQYIp9l3/LaSnsFGSlR2Kg1IYUYMXIqP9/BReIbyWWvSEPnsCG4WgCe+9tXuKd/BrBanTJ3C/PX0OT3wB2xJZ6A+5CJVaH/fxZ/6GvBYLn0e8ofHMme4f0HE/2d3/PAMmXYISkGifOPyzDV721brYBjUgjNmQYq+tIRbHIgq/l3NM+PNYmP2n3e5aO+iFMb4aoiY2LObTJ01IY1SRlwt3VfeeXU5FXAbxifYKIo4Pkx7RZe34qs2dbyGZb0Uo5A1mUFzlyZex9zuKQS8Yy3oxJa/K8E40RsrqBGGtmx8Clq3p5I3stzEaJtQupP5IdkdA2iLW21 test-project-repo@beanstalkapp.com\"}}",
+      "headers": {
+        "Content-Type": "application/json; charset=utf-8",
+        "Transfer-Encoding": "chunked",
+        "Connection": "keep-alive",
+        "Status": "201 Created",
+        "Cache-Control": "max-age=0, private, no-cache, no-store, must-revalidate",
+        "Date": "Fri, 22 Jul 2016 12:08:21 GMT",
+        "X-XSS-Protection": "1; mode=block",
+        "X-Request-Id": "e27b8ce5-5fca-4d75-8b54-73f3e144917f",
+        "Location": "https://fake-account.beanstalkapp.com/repositories/test-project",
+        "X-Runtime": "0.439232",
+        "Set-Cookie": "sess_ver=7d5d3e76a079d2ba154c0f549467668e87cbc9d9; path=/; expires=Mon, 22 Aug 2016 12:08:21 -0000; secure; HttpOnly",
+        "X-Powered-By": "BeanServ 1.1",
+        "Server": "BeanServ 1.1",
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-Content-Type-Options": "nosniff",
+        "Strict-Transport-Security": "max-age=15768000"
+      },
+      "status_code": 201,
+      "type": "ok"
+    }
+  }
+]

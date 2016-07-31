@@ -1,0 +1,42 @@
+[
+  {
+    "request": {
+      "body": "\"\"",
+      "headers": {
+        "Accept": "application/json",
+        "Content-Type": "application/json"
+      },
+      "method": "get",
+      "options": {
+        "basic_auth": [
+          "fake-username",
+          "fake-password!"
+        ]
+      },
+      "request_body": "",
+      "url": "https://fake-account.beanstalkapp.com/api/repositories.json"
+    },
+    "response": {
+      "body": "[]",
+      "headers": {
+        "Content-Type": "application/json; charset=utf-8",
+        "Transfer-Encoding": "chunked",
+        "Connection": "keep-alive",
+        "Status": "200 OK",
+        "Cache-Control": "max-age=0, private, no-cache, no-store, must-revalidate",
+        "Date": "Sat, 23 Jul 2016 04:31:53 GMT",
+        "X-XSS-Protection": "1; mode=block",
+        "X-Request-Id": "85077872-440e-4863-a2d4-0eefb7939a89",
+        "X-Runtime": "0.415700",
+        "Set-Cookie": "sess_ver=10e2846c87145f5f2a27849749b54d0bed1d0254; path=/; expires=Tue, 23 Aug 2016 04:31:53 -0000; secure; HttpOnly",
+        "X-Powered-By": "BeanServ 1.1",
+        "Server": "BeanServ 1.1",
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-Content-Type-Options": "nosniff",
+        "Strict-Transport-Security": "max-age=15768000"
+      },
+      "status_code": 200,
+      "type": "ok"
+    }
+  }
+]

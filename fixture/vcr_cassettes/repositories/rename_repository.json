@@ -1,0 +1,42 @@
+[
+  {
+    "request": {
+      "body": "{\"repository\":{\"name\":\"renamed-test-project\",\"title\":\"Renamed Test Project\"}}",
+      "headers": {
+        "Accept": "application/json",
+        "Content-Type": "application/json"
+      },
+      "method": "put",
+      "options": {
+        "basic_auth": [
+          "fake-username",
+          "fake-password!"
+        ]
+      },
+      "request_body": "",
+      "url": "https://fake-account.beanstalkapp.com/api/repositories/708090/rename.json"
+    },
+    "response": {
+      "body": "{\"repository\":{\"id\":708090,\"account_id\":188075,\"name\":\"renamed-test-project\",\"created_at\":\"2016/07/23 15:08:49 +1000\",\"updated_at\":\"2016/07/23 15:20:06 +1000\",\"title\":\"Another Test Project Updated\",\"color_label\":\"green\",\"storage_used_bytes\":0,\"last_commit_at\":null,\"type\":\"GitRepository\",\"default_branch\":\"master\",\"vcs\":\"git\",\"repository_url\":\"git@fake-account.git.beanstalkapp.com:/fake-account/renamed-test-project.git\",\"repository_url_https\":\"https://fake-account.git.beanstalkapp.com/renamed-test-project.git\",\"public_key\":\"ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCbj6o9XyT9/PAx+JK3IF+icSrgV4UzAjbtpl/J+WDC4QxH3g5wwMUH7CHVq3DCgUk/qk7+vJt509hZhhs7DmEE4K9gqlfoFUbzbE5kF2y8ijaQwPdHK7DKTEZIoQHcz0FbF5sc2EmkZmqvlrRqbXXTD5EuenNye3UK3qdHXD0/1PjGSCuBFWUk4WagSMPAgfQ3Rolw7XvVhkUrAz7CifGQI8/ytcL3VkROnv7/8IJtZy8D9dzC1zzD05WWSOboPwdF2+Wq4Hkim3a4OYeBCQLzFcoOvQiCf/9d2TrHIa9VDAjyQq/+O1qx/UglUsHQy9HQbSbZwYhhZdy3erUXecMP new-repo-repo@beanstalkapp.com\"}}",
+      "headers": {
+        "Content-Type": "application/json; charset=utf-8",
+        "Transfer-Encoding": "chunked",
+        "Connection": "keep-alive",
+        "Status": "200 OK",
+        "Cache-Control": "max-age=0, private, no-cache, no-store, must-revalidate",
+        "Date": "Sat, 23 Jul 2016 05:20:06 GMT",
+        "X-XSS-Protection": "1; mode=block",
+        "X-Request-Id": "2775d7fc-58cd-4ec2-bfc2-477be3917385",
+        "X-Runtime": "0.081269",
+        "Set-Cookie": "sess_ver=10e2846c87145f5f2a27849749b54d0bed1d0254; path=/; expires=Tue, 23 Aug 2016 05:20:06 -0000; secure; HttpOnly",
+        "X-Powered-By": "BeanServ 1.1",
+        "Server": "BeanServ 1.1",
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-Content-Type-Options": "nosniff",
+        "Strict-Transport-Security": "max-age=15768000"
+      },
+      "status_code": 200,
+      "type": "ok"
+    }
+  }
+]

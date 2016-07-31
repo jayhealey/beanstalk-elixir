@@ -1,0 +1,26 @@
+[
+  {
+    "request": {
+      "body": "\"\"",
+      "headers": {
+        "Accept": "application/json",
+        "Content-Type": "application/json"
+      },
+      "method": "get",
+      "options": {
+        "basic_auth": [
+          "fake-username",
+          "fake-password!"
+        ]
+      },
+      "request_body": "",
+      "url": "https://fake-account.beanstalkapp.com/api/changesets/abcdef03.json?repository_id=654123"
+    },
+    "response": {
+      "body": "timeout",
+      "headers": [],
+      "status_code": null,
+      "type": "error"
+    }
+  }
+]

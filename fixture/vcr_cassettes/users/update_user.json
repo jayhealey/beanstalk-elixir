@@ -1,0 +1,42 @@
+[
+  {
+    "request": {
+      "body": "{\"user\":{\"login\":\"testupdate\",\"email\":\"test@testupdate.com\",\"name\":\"testing updater\",\"password\":\"testing321!\",\"admin\":false,\"timezone\":\"Melbourne\"}}",
+      "headers": {
+        "Accept": "application/json",
+        "Content-Type": "application/json"
+      },
+      "method": "put",
+      "options": {
+        "basic_auth": [
+          "fake-username",
+          "fake-password!"
+        ]
+      },
+      "request_body": "",
+      "url": "https://fake-account.beanstalkapp.com/api/users/321654.json"
+    },
+    "response": {
+      "body": "",
+      "headers": {
+        "Content-Type": "application/json",
+        "Transfer-Encoding": "chunked",
+        "Connection": "keep-alive",
+        "Status": "200 OK",
+        "Cache-Control": "max-age=0, private, no-cache, no-store, must-revalidate",
+        "Date": "Sat, 23 Jul 2016 11:21:34 GMT",
+        "X-XSS-Protection": "1; mode=block",
+        "X-Request-Id": "7f755d2f-2961-4cda-a591-2edfe69b13a6",
+        "X-Runtime": "0.751529",
+        "Set-Cookie": "sess_ver=7d5d3e76a079d2ba154c0f549467668e87cbc9d9; path=/; expires=Tue, 23 Aug 2016 11:21:34 -0000; secure; HttpOnly",
+        "X-Powered-By": "BeanServ 1.1",
+        "Server": "BeanServ 1.1",
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-Content-Type-Options": "nosniff",
+        "Strict-Transport-Security": "max-age=15768000"
+      },
+      "status_code": 200,
+      "type": "ok"
+    }
+  }
+]

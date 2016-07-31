@@ -1,0 +1,42 @@
+[
+  {
+    "request": {
+      "body": "\"\"",
+      "headers": {
+        "Accept": "application/json",
+        "Content-Type": "application/json"
+      },
+      "method": "get",
+      "options": {
+        "basic_auth": [
+          "fake-username",
+          "fake-password!"
+        ]
+      },
+      "request_body": "",
+      "url": "https://fake-account.beanstalkapp.com/api/changesets.json?page=1&per_page=1&order_field=time&order=ASC"
+    },
+    "response": {
+      "body": "[{\"revision_cache\":{\"repository_id\":654123,\"revision\":\"5fdc5107\",\"message\":\"Initial Commit\",\"author\":\"Test User\",\"changed_files\":[[\".gitignore\",\"add\"],[\"README.md\",\"add\"],[\"lib/beanstalk.ex\",\"add\"],[\"lib/beanstalk/user.ex\",\"add\"],[\"lib/beanstalk/users.ex\",\"add\"],[\"mix.exs\",\"add\"],[\"mix.lock\",\"add\"],[\"test/beanstalk_test.exs\",\"add\"],[\"test/test_helper.exs\",\"add\"]],\"changed_dirs\":[],\"time\":\"2016/07/09 20:10:21 +1000\",\"account_id\":188075,\"too_large\":null,\"hash_id\":\"5fdc510794363c6f4303d148dd6daf62dc3b1c1a\",\"email\":\"fake-username@gmail.com\",\"user_id\":123456}}]",
+      "headers": {
+        "Content-Type": "application/json; charset=utf-8",
+        "Transfer-Encoding": "chunked",
+        "Connection": "keep-alive",
+        "Status": "200 OK",
+        "Cache-Control": "max-age=0, private, no-cache, no-store, must-revalidate",
+        "Date": "Sat, 30 Jul 2016 09:53:25 GMT",
+        "X-XSS-Protection": "1; mode=block",
+        "X-Request-Id": "28a2eaed-ba04-4a20-8012-ab531ade9429",
+        "X-Runtime": "0.035144",
+        "Set-Cookie": "sess_ver=10e2846c87145f5f2a27849749b54d0bed1d0254; path=/; expires=Tue, 30 Aug 2016 09:53:25 -0000; secure; HttpOnly",
+        "X-Powered-By": "BeanServ 1.1",
+        "Server": "BeanServ 1.1",
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-Content-Type-Options": "nosniff",
+        "Strict-Transport-Security": "max-age=15768000"
+      },
+      "status_code": 200,
+      "type": "ok"
+    }
+  }
+]

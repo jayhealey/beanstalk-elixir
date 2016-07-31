@@ -1,0 +1,42 @@
+[
+  {
+    "request": {
+      "body": "\"\"",
+      "headers": {
+        "Accept": "application/json",
+        "Content-Type": "application/json"
+      },
+      "method": "get",
+      "options": {
+        "basic_auth": [
+          "fake-username",
+          "fake-password!"
+        ]
+      },
+      "request_body": "",
+      "url": "https://fake-account.beanstalkapp.com/api/changesets/c20f133d.json?repository_id=654123"
+    },
+    "response": {
+      "body": "{\"revision_cache\":{\"repository_id\":654123,\"revision\":\"c20f133d\",\"message\":\"Add fixures for Repository and User tests\",\"author\":\"Test User\",\"changed_files\":[[\"README.md\",\"edit\"],[\"config/dev.exs\",\"add\"],[\"doc/404.html\",\"edit\"],[\"doc/Beanstalk.Changeset.html\",\"edit\"],[\"doc/Beanstalk.Release.html\",\"edit\"],[\"doc/Beanstalk.Repository.html\",\"edit\"],[\"doc/Beanstalk.User.html\",\"edit\"],[\"doc/Beanstalk.html\",\"edit\"],[\"doc/api-reference.html\",\"edit\"],[\"doc/dist/sidebar_items.js\",\"edit\"],[\"doc/index.html\",\"edit\"],[\"fixture/custom_cassettes/create_new_repository.json\",\"add\"],[\"fixture/vcr_cassettes/repositories/create_new_repository.json\",\"add\"],[\"fixture/vcr_cassettes/repositories/create_new_repository_reaching_limit.json\",\"add\"],[\"fixture/vcr_cassettes/repositories/delete_missing_repository.json\",\"add\"],[\"fixture/vcr_cassettes/repositories/delete_repository.json\",\"add\"],[\"fixture/vcr_cassettes/repositories/find_repository.json\",\"add\"],[\"fixture/vcr_cassettes/repositories/find_repository_missing.json\",\"add\"],[\"fixture/vcr_cassettes/repositories/list_all_repositories.json\",\"add\"],[\"fixture/vcr_cassettes/repositories/list_all_repositories_paginated.json\",\"add\"],[\"fixture/vcr_cassettes/repositories/rename_missing_repository.json\",\"add\"],[\"fixture/vcr_cassettes/repositories/rename_repository.json\",\"add\"],[\"fixture/vcr_cassettes/repositories/update_missing_repository.json\",\"add\"],[\"fixture/vcr_cassettes/repositories/update_repository.json\",\"add\"],[\"fixture/vcr_cassettes/users/create_new_user.json\",\"add\"],[\"fixture/vcr_cassettes/users/create_new_user_reaching_limit.json\",\"add\"],[\"fixture/vcr_cassettes/users/delete_missing_user.json\",\"add\"],[\"fixture/vcr_cassettes/users/delete_user.json\",\"add\"],[\"fixture/vcr_cassettes/users/find_missing_user.json\",\"add\"],[\"fixture/vcr_cassettes/users/find_user.json\",\"add\"],[\"fixture/vcr_cassettes/users/get_current_user.json\",\"add\"],[\"fixture/vcr_cassettes/users/list_all_users.json\",\"add\"],[\"fixture/vcr_cassettes/users/list_all_users_paginated.json\",\"add\"],[\"fixture/vcr_cassettes/users/update_user.json\",\"add\"],[\"lib/beanstalk.ex\",\"edit\"],[\"lib/beanstalk/changeset.ex\",\"edit\"],[\"lib/beanstalk/release.ex\",\"edit\"],[\"lib/beanstalk/repository.ex\",\"edit\"],[\"lib/beanstalk/user.ex\",\"edit\"],[\"mix.exs\",\"edit\"],[\"mix.lock\",\"edit\"],[\"test/beanstalk_test.exs\",\"edit\"],[\"test/repository_test.exs\",\"edit\"],[\"test/user_test.exs\",\"add\"]],\"changed_dirs\":[],\"time\":\"2016/07/24 17:03:43 +1000\",\"account_id\":188075,\"too_large\":null,\"hash_id\":\"c20f133d0557a2915831367d94da39a694caabd3\",\"email\":\"fake-username@gmail.com\",\"user_id\":123456}}",
+      "headers": {
+        "Content-Type": "application/json; charset=utf-8",
+        "Transfer-Encoding": "chunked",
+        "Connection": "keep-alive",
+        "Status": "200 OK",
+        "Cache-Control": "max-age=0, private, no-cache, no-store, must-revalidate",
+        "Date": "Sat, 30 Jul 2016 09:53:24 GMT",
+        "X-XSS-Protection": "1; mode=block",
+        "X-Request-Id": "d480c94f-ee92-4243-bca1-7fc04a3b43a4",
+        "X-Runtime": "0.056803",
+        "Set-Cookie": "sess_ver=10e2846c87145f5f2a27849749b54d0bed1d0254; path=/; expires=Tue, 30 Aug 2016 09:53:24 -0000; secure; HttpOnly",
+        "X-Powered-By": "BeanServ 1.1",
+        "Server": "BeanServ 1.1",
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-Content-Type-Options": "nosniff",
+        "Strict-Transport-Security": "max-age=15768000"
+      },
+      "status_code": 200,
+      "type": "ok"
+    }
+  }
+]

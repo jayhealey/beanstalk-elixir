@@ -1,0 +1,392 @@
+    <!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="ExDoc v0.12.0">
+    <title>Beanstalk.User – Beanstalk HTTP client v0.1.0</title>
+    <link rel="stylesheet" href="dist/app-88251e7c81.css" />
+    
+    <script src="dist/sidebar_items.js"></script>
+  </head>
+  <body data-type="modules">
+
+    <div class="main">
+<button class="sidebar-toggle">
+  <i class="icon-menu"></i>
+</button>
+<section class="sidebar">
+
+  
+  <a href="api-reference.html" class="sidebar-projectLink">
+    <div class="sidebar-projectDetails">
+      <h1 class="sidebar-projectName">
+        Beanstalk HTTP client
+      </h1>
+      <h2 class="sidebar-projectVersion">
+        v0.1.0
+      </h2>
+    </div>
+    
+  </a>
+
+  <div class="sidebar-search">
+    <i class="icon-search"></i>
+    <input type="text" class="sidebar-searchInput" placeholder="search" autocomplete="off" />
+  </div>
+
+  <ul class="sidebar-listNav">
+    <li><a id="extras-list" href="#full-list">Pages</a></li>
+
+    
+      <li><a id="modules-list" href="#full-list">Modules</a></li>
+    
+
+    
+
+    
+  </ul>
+
+  <ul id="full-list" class="sidebar-fullList"></ul>
+  <div class="sidebar-noResults"></div>
+</section>
+
+<section class="content">
+  <div class="content-outer">
+    <div id="content" class="content-inner">
+
+
+      <h1>
+        <small class="visible-xs">Beanstalk HTTP client v0.1.0</small>
+        Beanstalk.User
+        
+        
+          <a href="https://github.com/jayhealey/beanstalk-elixir/blob/master/lib/beanstalk/user.ex#L1" title="View Source" class="view-source" rel="help">
+            <i class="icon-code"></i>
+          </a>
+        
+      </h1>
+
+      
+        <section id="moduledoc" class="docstring">
+          <p>Manage user accounts within Beanstalk.</p>
+<p>See: <a href="http://api.beanstalkapp.com/user.html">http://api.beanstalkapp.com/user.html</a></p>
+
+        </section>
+      
+
+      
+        <section id="summary" class="details-list">
+          <h1 class="section-heading">
+            <a class="hover-link" href="#summary">
+              <i class="icon-link"></i>
+            </a>
+            Summary
+          </h1>
+          
+
+          
+  <div class="summary-functions summary">
+    <h2>
+      <a href="#functions">Functions</a>
+    </h2>
+    <div class="summary-row">
+  <div class="summary-signature">
+    <a href="#all/0">all()</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Returns a full list of users within your Beanstalk account</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#all/2">all(page, per_page)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Returns a paginated list of users within your Beanstalk account</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#create/6">create(login, email, name, password, timezone \\ &quot;&quot;, admin \\ false)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Create new user</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#current/0">current()</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Returns currently logged in user (that is: the user you configured for module)</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#delete/1">delete(user_id)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Delete the given user</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#find/1">find(user_id)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Returns a single user matching the given <code class="inline">user_id</code></p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#update/7">update(user_id, login, email, name, password, timezone \\ &quot;&quot;, admin \\ false)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>Update the given user</p>
+</div>
+  
+</div>
+
+  </div>
+
+
+          
+
+          
+
+        </section>
+      
+
+      
+
+      
+        <section id="functions" class="details-list">
+          <h1 class="section-heading">
+            <a class="hover-link" href="#functions">
+              <i class="icon-link"></i>
+            </a>
+            Functions
+          </h1>
+          <div class="detail" id="all/0">
+  <div class="detail-header">
+    <a href="#all/0" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">all()</span>
+    
+      <a href="https://github.com/jayhealey/beanstalk-elixir/blob/master/lib/beanstalk/user.ex#L12" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+  </div>
+  
+  <section class="docstring">
+    <p>Returns a full list of users within your Beanstalk account.</p>
+
+  </section>
+</div>
+<div class="detail" id="all/2">
+  <div class="detail-header">
+    <a href="#all/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">all(page, per_page)</span>
+    
+      <a href="https://github.com/jayhealey/beanstalk-elixir/blob/master/lib/beanstalk/user.ex#L25" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+  </div>
+  
+  <section class="docstring">
+    <p>Returns a paginated list of users within your Beanstalk account.</p>
+<p>Set the page number and per page.</p>
+<p>Args:</p>
+<ul>
+<li><code class="inline">page</code> - page number for pagination.
+</li>
+<li><code class="inline">per_page</code> - number of elements per page (default 30, maximum 50).
+</li>
+</ul>
+
+  </section>
+</div>
+<div class="detail" id="create/6">
+  <div class="detail-header">
+    <a href="#create/6" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">create(login, email, name, password, timezone \\ &quot;&quot;, admin \\ false)</span>
+    
+      <a href="https://github.com/jayhealey/beanstalk-elixir/blob/master/lib/beanstalk/user.ex#L59" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+  </div>
+  
+  <section class="docstring">
+    <p>Create new user.</p>
+<p><em>Admin privileges required for this API method.</em></p>
+<p>Args:</p>
+<ul>
+<li><code class="inline">login</code> - Username. Unique per Account.
+</li>
+<li><code class="inline">email</code> - Email address. Unique per account.
+</li>
+<li><code class="inline">name</code> - Full name.
+</li>
+<li><code class="inline">password</code> - Required on create.
+</li>
+<li><code class="inline">timezone</code> - Optional.
+</li>
+<li><code class="inline">admin</code> - Boolean value. Optional. Default is <code class="inline">false.</code>
+</li>
+</ul>
+
+  </section>
+</div>
+<div class="detail" id="current/0">
+  <div class="detail-header">
+    <a href="#current/0" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">current()</span>
+    
+      <a href="https://github.com/jayhealey/beanstalk-elixir/blob/master/lib/beanstalk/user.ex#L42" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+  </div>
+  
+  <section class="docstring">
+    <p>Returns currently logged in user (that is: the user you configured for module).</p>
+
+  </section>
+</div>
+<div class="detail" id="delete/1">
+  <div class="detail-header">
+    <a href="#delete/1" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">delete(user_id)</span>
+    
+      <a href="https://github.com/jayhealey/beanstalk-elixir/blob/master/lib/beanstalk/user.ex#L113" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+  </div>
+  
+  <section class="docstring">
+    <p>Delete the given user.</p>
+<p>Admin privileges required for this API method.</p>
+<p>You can not delete account owner.</p>
+<p>Args:</p>
+<ul>
+<li><code class="inline">user_id</code> - The <code class="inline">id</code> attribute from the <code class="inline">user</code> object (not <code class="inline">account_id</code>).
+</li>
+</ul>
+
+  </section>
+</div>
+<div class="detail" id="find/1">
+  <div class="detail-header">
+    <a href="#find/1" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">find(user_id)</span>
+    
+      <a href="https://github.com/jayhealey/beanstalk-elixir/blob/master/lib/beanstalk/user.ex#L35" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+  </div>
+  
+  <section class="docstring">
+    <p>Returns a single user matching the given <code class="inline">user_id</code>.</p>
+<p>Args:</p>
+<ul>
+<li><code class="inline">user_id</code> - The <code class="inline">id</code> attribute from the <code class="inline">user</code> object (not <code class="inline">account_id</code>).
+</li>
+</ul>
+
+  </section>
+</div>
+<div class="detail" id="update/7">
+  <div class="detail-header">
+    <a href="#update/7" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">update(user_id, login, email, name, password, timezone \\ &quot;&quot;, admin \\ false)</span>
+    
+      <a href="https://github.com/jayhealey/beanstalk-elixir/blob/master/lib/beanstalk/user.ex#L88" class="view-source" rel="help" title="View Source">
+       <i class="icon-code"></i>
+     </a>
+    
+    
+  </div>
+  
+  <section class="docstring">
+    <p>Update the given user.</p>
+<p><em>Admin privileges required for this API method.</em></p>
+<p>Args:</p>
+<ul>
+<li><code class="inline">user_id</code> - The <code class="inline">id</code> attribute from the <code class="inline">user</code> object (not <code class="inline">account_id</code>).
+</li>
+<li><code class="inline">login</code> - Username. Unique per Account.
+</li>
+<li><code class="inline">email</code> - Email address. Unique per account.
+</li>
+<li><code class="inline">name</code> - Full name.
+</li>
+<li><code class="inline">password</code> - Required on create.
+</li>
+<li><code class="inline">timezone</code> - Optional.
+</li>
+<li><code class="inline">admin</code> - Boolean value. Optional. Default is <code class="inline">false.</code>
+</li>
+</ul>
+
+  </section>
+</div>
+
+        </section>
+      
+
+      
+
+      
+          <footer class="footer">
+        <p>
+          <span class="line">
+            Built using
+            <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.12.0),
+          </span>
+          <span class="line">
+            designed by
+            <a href="https://twitter.com/dignifiedquire" target="_blank" title="@dignifiedquire">Friedel Ziegelmayer</a>.
+            </span>
+        </p>
+        <button class="night-mode-toggle" />
+      </footer>
+    </div>
+  </div>
+</section>
+</div>
+  <script src="dist/app-21f1a20b9e.js"></script>
+  </body>
+</html>
+

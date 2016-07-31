@@ -1,0 +1,43 @@
+[
+  {
+    "request": {
+      "body": "{\"user\":{\"login\":\"test\",\"email\":\"test@test.com\",\"name\":\"testing tester\",\"password\":\"testing321!\",\"admin\":false,\"timezone\":\"Melbourne\"}}",
+      "headers": {
+        "Accept": "application/json",
+        "Content-Type": "application/json"
+      },
+      "method": "post",
+      "options": {
+        "basic_auth": [
+          "fake-username",
+          "fake-password!"
+        ]
+      },
+      "request_body": "",
+      "url": "https://fake-account.beanstalkapp.com/api/users.json"
+    },
+    "response": {
+      "body": "{\"user\":{\"id\":321654,\"first_name\":\"testing\",\"last_name\":\"tester\",\"login\":\"test\",\"email\":\"test@test.com\",\"created_at\":\"2016/07/23 21:14:13 +1000\",\"updated_at\":\"2016/07/23 21:14:13 +1000\",\"account_id\":102030,\"admin\":false,\"timezone\":\"Melbourne\",\"can_create_repos\":false,\"owner\":false,\"name\":\"testing tester\"}}",
+      "headers": {
+        "Content-Type": "application/json; charset=utf-8",
+        "Transfer-Encoding": "chunked",
+        "Connection": "keep-alive",
+        "Status": "201 Created",
+        "Cache-Control": "max-age=0, private, no-cache, no-store, must-revalidate",
+        "Date": "Sat, 23 Jul 2016 11:14:13 GMT",
+        "X-XSS-Protection": "1; mode=block",
+        "X-Request-Id": "cbf8e0b8-2dd3-447b-ac6b-31d91dbe06ab",
+        "Location": "https://fake-account.beanstalkapp.com/users/321654",
+        "X-Runtime": "0.460160",
+        "Set-Cookie": "sess_ver=7d5d3e76a079d2ba154c0f549467668e87cbc9d9; path=/; expires=Tue, 23 Aug 2016 11:14:13 -0000; secure; HttpOnly",
+        "X-Powered-By": "BeanServ 1.1",
+        "Server": "BeanServ 1.1",
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-Content-Type-Options": "nosniff",
+        "Strict-Transport-Security": "max-age=15768000"
+      },
+      "status_code": 201,
+      "type": "ok"
+    }
+  }
+]

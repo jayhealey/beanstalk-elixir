@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="ExDoc v0.12.0">
+    <title>README – Beanstalk HTTP client v0.1.0</title>
+    <link rel="stylesheet" href="dist/app-88251e7c81.css" />
+    
+    <script src="dist/sidebar_items.js"></script>
+  </head>
+  <body data-type="extras">
+
+<div class="main">
+<button class="sidebar-toggle">
+  <i class="icon-menu"></i>
+</button>
+<section class="sidebar">
+
+  
+  <a href="api-reference.html" class="sidebar-projectLink">
+    <div class="sidebar-projectDetails">
+      <h1 class="sidebar-projectName">
+        Beanstalk HTTP client
+      </h1>
+      <h2 class="sidebar-projectVersion">
+        v0.1.0
+      </h2>
+    </div>
+    
+  </a>
+
+  <div class="sidebar-search">
+    <i class="icon-search"></i>
+    <input type="text" class="sidebar-searchInput" placeholder="search" autocomplete="off" />
+  </div>
+
+  <ul class="sidebar-listNav">
+    <li><a id="extras-list" href="#full-list">Pages</a></li>
+
+    
+      <li><a id="modules-list" href="#full-list">Modules</a></li>
+    
+
+    
+
+    
+  </ul>
+
+  <ul id="full-list" class="sidebar-fullList"></ul>
+  <div class="sidebar-noResults"></div>
+</section>
+
+<section class="content">
+  <div class="content-outer">
+    <div id="content" class="content-inner">
+
+
+<h1>Beanstalk-Elixir</h1>
+<h3>An HTTP client for the Beanstalk API written in Elixir.</h3>
+<p>Beanstalk is for hosting and deployment of code: <a href="https://beanstalkapp.com">https://beanstalkapp.com</a></p>
+<p>The API documentation can be found here: <a href="https://api.beanstalkapp.com">https://api.beanstalkapp.com</a></p>
+<hr class="thin"/>
+<h2 id="installation"> Installation</h2><p>If <a href="https://hex.pm/docs/publish">available in Hex</a>, the package can be installed as:</p>
+<ol>
+<li><p>Add beanstalk to your list of dependencies in <code class="inline">mix.exs</code>:</p>
+<pre><code class="elixir">def deps do
+  [{:beanstalk, &quot;~&gt; 0.1.0&quot;}]
+end</code></pre>
+</li>
+<li><p>Ensure beanstalk is started before your application:</p>
+<pre><code class="elixir">def application do
+  [applications: [:beanstalk]]
+end</code></pre>
+</li>
+<li><p>In your <code class="inline">config/config.exs</code>, add the following and set your Beanstalk settings:</p>
+<pre><code class="elixir">config :beanstalk,
+  account: &quot;account-name&quot;,
+  username: &quot;username&quot;,
+  password: &quot;password&quot;</code></pre>
+</li>
+</ol>
+<p>The <code class="inline">account</code> is the sub-domain you use to access Beanstalk. If the URL is <code class="inline">http://company.beanstalkapp.com</code>, then your account is <code class="inline">company</code>.</p>
+<p>The <code class="inline">username</code> and <code class="inline">password</code> are the user account you want to use to access the API.</p>
+<p><em>It’s advisable to create an account specifically for using the API, and set the access levels you require for your needs instead of using your own account.</em></p>
+<hr class="thin"/>
+<h2 id="making-calls"> Making calls</h2><p>Firstly, start the module, and then call the end-point…</p>
+<pre><code class="elixir">{:ok, response} = Beanstalk.User.all
+
+{:ok,
+ [%{&quot;user&quot; =&gt; %{
+    &quot;account_id&quot; =&gt; 123456,
+    &quot;admin&quot; =&gt; false,
+      &quot;can_create_repos&quot; =&gt; false,
+      &quot;created_at&quot; =&gt; &quot;2016/07/10 12:50:25 +1000&quot;,
+      &quot;email&quot; =&gt; &quot;test@test.com&quot;,
+      &quot;first_name&quot; =&gt; &quot;Test&quot;,
+      &quot;id&quot; =&gt; 654321,
+      &quot;last_name&quot; =&gt; &quot;Test&quot;,
+      &quot;login&quot; =&gt; &quot;fake-username&quot;,
+      &quot;name&quot; =&gt; &quot;Test Test&quot;,
+      &quot;owner&quot; =&gt; true,
+      &quot;timezone&quot; =&gt; &quot;Melbourne&quot;,
+      &quot;updated_at&quot; =&gt; &quot;2016/07/23 16:37:11 +1000&quot;
+    }
+  }
+]}</code></pre>
+<p>See the <a href="doc/index.html">documentation for full details</a> of all the end-points.</p>
+<hr class="thin"/>
+<h2 id="handling-responses"> Handling responses</h2><p>The core <code class="inline">Beanstalk</code> module handles the response, so you don’t have to worry about HTTP status codes, JSON decoding or error trapping - that’s all done for you.</p>
+<p>All you need to do is pattern match the following tuples.</p>
+<h3>Successful response</h3>
+<p>The most common response is the successful one…</p>
+<pre><code class="elixir">{:ok, response} =&gt; ...</code></pre>
+<p><code class="inline">:ok</code> indicates a successful call.</p>
+<p><code class="inline">response</code> is the result body, decoded from JSON (using <code class="inline">JSX.decode</code>) to a Map.</p>
+<h3>Empty (but successful) response</h3>
+<p>This will only occur when calling an end-point that uses <code class="inline">update</code> or <code class="inline">delete</code>.</p>
+<p>This is because the body of the response will be empty - but it’s still a successful response.</p>
+<pre><code class="elixir">{:ok, :empty} =&gt; ...</code></pre>
+<p><code class="inline">:ok</code> indicates a successful call.</p>
+<p><code class="inline">:empty</code> indicates an empty body.</p>
+<h3>Failure response</h3>
+<p>In the case the call fails, by means of bad parameters or bad response:</p>
+<pre><code class="elixir">{:error, message} =&gt; ...</code></pre>
+<p><code class="inline">:error</code> indicates an error occurred making the call.</p>
+<p><code class="inline">message</code> is a string containing all of the error messages returned by Beanstalk.</p>
+<hr class="thin"/>
+<h3>As an aside…</h3>
+<p>All of the end-point modules rely on the core <code class="inline">Beanstalk</code> module, and it’s unlikely you’ll ever call the <code class="inline">Beanstalk</code> module directly (unless of course you want to contribute?).</p>
+<p>As the <code class="inline">Beanstalk</code> module uses <code class="inline">HTTPoison</code>, the generated documentation quickly became confusing and added nothing to this module.</p>
+<p>So whilst it’s core of this plugin, documentation for it has been disabled - but it is commented.</p>
+<p>Any ideas, pull requests or feedback welcome.</p>
+<hr class="thin"/>
+<h2 id="coverage"> Coverage</h2><p>The following end-points are covered with documentation:</p>
+<p>&#x2713; Changeset<br>
+&#x2713; Release (require tests)<br>
+&#x2713; Repository<br>
+&#x2713; User</p>
+<p>The following need coverage:</p>
+<p>&#x2717; Account<br>
+&#x2717; Code Reviews (Comments, Events, Assignees, Watchers, Settings)<br>
+&#x2717; Comment<br>
+&#x2717; Feed Key<br>
+&#x2717; Invitation<br>
+&#x2717; Integration<br>
+&#x2717; Node<br>
+&#x2717; Public Key<br>
+&#x2717; Repository Import<br>
+&#x2717; Permissions<br>
+&#x2717; Plan<br>
+&#x2717; Release Server<br>
+&#x2717; Server Environment<br>
+&#x2717; Team<br></p>
+
+      <footer class="footer">
+        <p>
+          <span class="line">
+            Built using
+            <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.12.0),
+          </span>
+          <span class="line">
+            designed by
+            <a href="https://twitter.com/dignifiedquire" target="_blank" title="@dignifiedquire">Friedel Ziegelmayer</a>.
+            </span>
+        </p>
+        <button class="night-mode-toggle" />
+      </footer>
+    </div>
+  </div>
+</section>
+</div>
+  <script src="dist/app-21f1a20b9e.js"></script>
+  </body>
+</html>
+

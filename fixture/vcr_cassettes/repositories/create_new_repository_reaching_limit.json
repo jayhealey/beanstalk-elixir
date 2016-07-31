@@ -1,0 +1,39 @@
+[
+  {
+    "request": {
+      "body": "{\"repository\":{\"type_id\":\"git\",\"name\":\"another-test-project\",\"title\":\"Another Test Project\",\"color_label\":\"label-green\"}}",
+      "headers": {
+        "Accept": "application/json",
+        "Content-Type": "application/json"
+      },
+      "method": "post",
+      "options": {
+        "basic_auth": [
+          "fake-username",
+          "fake-password!"
+        ]
+      },
+      "request_body": "",
+      "url": "https://fake-account.beanstalkapp.com/api/repositories.json"
+    },
+    "response": {
+      "body": "{\"errors\":[\"Repository can't be created. You reached your plan's limit of repositories.\"]}",
+      "headers": {
+        "Content-Type": "application/json; charset=utf-8",
+        "Transfer-Encoding": "chunked",
+        "Connection": "keep-alive",
+        "Status": "422 Unprocessable Entity",
+        "Cache-Control": "max-age=0, private, no-cache, no-store, must-revalidate",
+        "Date": "Sat, 23 Jul 2016 05:11:21 GMT",
+        "X-XSS-Protection": "1; mode=block",
+        "X-Request-Id": "10bca975-b7c9-46f1-bca1-ea8791596c9d",
+        "X-Runtime": "0.103671",
+        "Set-Cookie": "sess_ver=10e2846c87145f5f2a27849749b54d0bed1d0254; path=/; expires=Tue, 23 Aug 2016 05:11:21 -0000; secure; HttpOnly",
+        "X-Powered-By": "BeanServ 1.1",
+        "Server": "BeanServ 1.1"
+      },
+      "status_code": 422,
+      "type": "ok"
+    }
+  }
+]

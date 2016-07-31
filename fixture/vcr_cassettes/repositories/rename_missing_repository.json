@@ -1,0 +1,39 @@
+[
+  {
+    "request": {
+      "body": "{\"repository\":{\"name\":\"renamed-test-project\",\"title\":\"Renamed Test Project\"}}",
+      "headers": {
+        "Accept": "application/json",
+        "Content-Type": "application/json"
+      },
+      "method": "put",
+      "options": {
+        "basic_auth": [
+          "fake-username",
+          "fake-password!"
+        ]
+      },
+      "request_body": "",
+      "url": "https://fake-account.beanstalkapp.com/api/repositories/654789/rename.json"
+    },
+    "response": {
+      "body": "{\"errors\":[\"Repository Not Found\"]}",
+      "headers": {
+        "Content-Type": "application/json; charset=utf-8",
+        "Transfer-Encoding": "chunked",
+        "Connection": "keep-alive",
+        "Status": "404 Not Found",
+        "Cache-Control": "max-age=0, private, no-cache, no-store, must-revalidate",
+        "Date": "Sat, 23 Jul 2016 05:20:07 GMT",
+        "X-XSS-Protection": "1; mode=block",
+        "X-Request-Id": "c1f55ff4-ede3-431f-a4e6-7c012687c8af",
+        "X-Runtime": "0.251327",
+        "Set-Cookie": "sess_ver=10e2846c87145f5f2a27849749b54d0bed1d0254; path=/; expires=Tue, 23 Aug 2016 05:20:07 -0000; secure; HttpOnly",
+        "X-Powered-By": "BeanServ 1.1",
+        "Server": "BeanServ 1.1"
+      },
+      "status_code": 404,
+      "type": "ok"
+    }
+  }
+]
