@@ -3,13 +3,13 @@
 
 Beanstalk is for hosting and deployment of code: https://beanstalkapp.com
 
-The API documentation can be found here: https://api.beanstalkapp.com
+The API documentation can be found here: http://api.beanstalkapp.com
 
 ----
 
 ## Installation
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed as:
+It's available on Hex.pm, so it can be installed by:
 
   1. Add beanstalk to your list of dependencies in `mix.exs`:
 
