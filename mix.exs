@@ -40,7 +40,7 @@ defmodule Beanstalk.Mixfile do
   defp deps do
     [
       {:httpoison, "~> 0.9.0"},
-      {:exjsx, "~> 3.2", app: false, override: true},
+      {:exjsx, "~> 3.2", app: false},
       {:apex, "~>0.5.0", only: :dev},
       {:ex_doc, "~> 0.12", only: :dev},
       {:mock, "~> 0.1.1", only: :test},

@@ -5,6 +5,8 @@ Beanstalk is for hosting and deployment of code: https://beanstalkapp.com
 
 The API documentation can be found here: http://api.beanstalkapp.com
 
+Full details about the level of API coverage is <a href="https://hexdocs.pm/beanstalk/0.1.0/api-reference.html">explained in the documentation</a>.
+
 ----
 
 ## Installation
@@ -66,7 +68,7 @@ Firstly, start the module, and then call the end-point...
 ]}
 ```
 
-See the <a href="doc/index.html">documentation for full details</a> of all the end-points.
+See the <a href="https://hexdocs.pm/beanstalk/0.1.0/readme.html">documentation for full details</a> of all the end-points.
 
 ---
 
